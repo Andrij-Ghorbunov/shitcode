@@ -1,0 +1,19 @@
+<html>
+<head>
+<title>
+Is this year leap?
+</title>
+</head>
+<body>
+<script>
+function input_year() {
+	document.getElementById('leap_output').textContent = /((([02468][48]|[2468][048]|[13579][26])(0{2})?)|0{4}|^0*)$/.test(document.getElementById('year_input').value.toString()) ? 'This is a leap year' : 'This is NOT a leap year';
+}
+</script>
+<h2>Is this year leap?</h2>
+<span>Enter the year to check if it is a leap year or not:</span>
+<input id="year_input" type="text" oninput="input_year()"></input>
+<br />
+<span id="leap_output"></span>
+</body>
+</html>
